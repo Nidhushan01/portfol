@@ -1,617 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Section</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Section</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<style>
-  /* Global Styles */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f7fa;
-    padding-top: 70px; /* Adjusted for navbar height */
-    color: #2c3e50;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Navbar Styles */
-  .navbar {
-    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: background 0.3s ease;
-  }
-
-  .navbar-brand {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #fff !important;
-  }
-
-  .navbar-nav .nav-link {
-    color: #fff !important;
-    font-weight: 500;
-    margin-left: 15px;
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-
-  .navbar-nav .nav-link:hover {
-    color: #dbeafe !important;
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 992px) {
-    .navbar-collapse {
-      background: #1e3a8a;
-      padding: 15px;
-      border-radius: 8px;
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fa;
+      padding-top: 70px;
+      /* Adjusted for navbar height */
+      color: #2c3e50;
     }
-  }
 
-  /* About Section */
-  .about-section {
-    padding: 80px 0;
-    background: #fff;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .about-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/subtle-grunge.png');
-    opacity: 0.05;
-  }
+    /* Navbar Styles */
+    .navbar {
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease;
+    }
 
-  .about-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1e3a8a;
-    margin-bottom: 30px;
-    position: relative;
-  }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #fff !important;
+    }
 
-  .about-section h2::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background: #3b82f6;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin-left: 15px;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
 
-  .about-section img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid #3b82f6;
-    margin-bottom: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    .navbar-nav .nav-link:hover {
+      color: #dbeafe !important;
+      transform: translateY(-2px);
+    }
 
-  .about-section img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background: #1e3a8a;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    }
 
-  .about-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto 20px;
-    color: #4b5563;
-  }
+    /* About Section */
+    .about-section {
+      padding: 80px 0;
+      background: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-  /* Projects Section */
-  .projects-section {
-    padding: 80px 0;
-    background: linear-gradient(180deg, #e5e7eb, #f4f7fa);
-  }
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/subtle-grunge.png');
+      opacity: 0.05;
+    }
 
-  .projects-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1e3a8a;
-    text-align: justify;
-    margin-bottom: 50px;
-  }
+    .about-section h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 30px;
+      position: relative;
+    }
 
-  .projects-section h2::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background: #3b82f6;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .projects-section .card {
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
-  }
-
-  .projects-section .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  }
-
-  .projects-section .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .projects-section .card:hover .card-img-top {
-    transform: scale(1.05);
-  }
-
-  .projects-section .card-body {
-    padding: 20px;
-  }
-
-  .projects-section .card-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1e3a8a;
-  }
-
-  .projects-section .card-text {
-    font-size: 1rem;
-    color: #4b5563;
-    margin-bottom: 20px;
-  }
-
-  .projects-section .btn {
-    border-radius: 50px;
-    padding: 8px 20px;
-    font-weight: 500;
-    margin-right: 10px;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-
-  .projects-section .btn-primary {
-    background: #3b82f6;
-    border: none;
-  }
-
-  .projects-section .btn-primary:hover {
-    background: #1e40af;
-    transform: translateY(-2px);
-  }
-
-  .projects-section .btn-secondary {
-    background: #6b7280;
-    border: none;
-  }
-
-  .projects-section .btn-secondary:hover {
-    background: #4b5563;
-    transform: translateY(-2px);
-  }
-
-  /* Skills Section */
-  .skills-section {
-    padding: 80px 0;
-    background: #fff;
-  }
-
-  .skills-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1e3a8a;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .skills-section h2::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background: #3b82f6;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .skills-section .card {
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #f9fafb;
-  }
-
-  .skills-section .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  }
-
-  .skills-section .card-img-top {
-    height: 180px;
-    object-fit: contain;
-    background: #e5e7eb;
-    padding: 20px;
-  }
-
-  .skills-section .card-body {
-    padding: 20px;
-  }
-
-  .skills-section .card-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1e3a8a;
-  }
-
-  .skills-section .card-text {
-    font-size: 1rem;
-    color: #4b5563;
-    margin-bottom: 20px;
-  }
-
-  .skills-section .btn-outline-primary {
-    border-radius: 50px;
-    padding: 8px 20px;
-    font-weight: 500;
-    border: 2px solid #3b82f6;
-    color: #3b82f6;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  }
-
-  .skills-section .btn-outline-primary:hover {
-    background: #3b82f6;
-    color: #fff;
-    transform: translateY(-2px);
-  }
-
-  /* Contact Section */
-  .contact-section {
-    padding: 80px 0;
-    background: linear-gradient(180deg, #1e3a8a, #111827);
-    color: #fff;
-    text-align: center;
-  }
-
-  .contact-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 50px;
-  }
-
-  .contact-section h2::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background: #3b82f6;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .contact-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .contact-section p i {
-    margin-right: 10px;
-    font-size: 1.5rem;
-  }
-
-  .contact-section a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-  }
-
-  .contact-section a:hover {
-    color: #3b82f6;
-    transform: scale(1.1);
-  }
-
-  .contact-section .social-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  .contact-section .social-icon:hover {
-    transform: rotate(360deg);
-    opacity: 0.9;
-  }
-
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .about-section h2,
-    .projects-section h2,
-    .skills-section h2,
-    .contact-section h2 {
-      font-size: 2.5rem;
+    .about-section h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .about-section img {
-      width: 180px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #3b82f6;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      color: #4b5563;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #e5e7eb, #f4f7fa);
+    }
+
+    .projects-section h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      text-align: justify;
+      margin-bottom: 50px;
+    }
+
+    .projects-section h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .projects-section .card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+    }
+
+    .projects-section .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .projects-section .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .projects-section .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    .projects-section .card-body {
+      padding: 20px;
+    }
+
+    .projects-section .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    .projects-section .card-text {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 20px;
+    }
+
+    .projects-section .btn {
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-weight: 500;
+      margin-right: 10px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .projects-section .btn-primary {
+      background: #3b82f6;
+      border: none;
+    }
+
+    .projects-section .btn-primary:hover {
+      background: #1e40af;
+      transform: translateY(-2px);
+    }
+
+    .projects-section .btn-secondary {
+      background: #6b7280;
+      border: none;
+    }
+
+    .projects-section .btn-secondary:hover {
+      background: #4b5563;
+      transform: translateY(-2px);
+    }
+
+    /* Skills Section */
+    .skills-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .skills-section h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .skills-section h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .skills-section .card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f9fafb;
+    }
+
+    .skills-section .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .skills-section .card-img-top {
       height: 180px;
+      object-fit: contain;
+      background: #e5e7eb;
+      padding: 20px;
+    }
+
+    .skills-section .card-body {
+      padding: 20px;
+    }
+
+    .skills-section .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    .skills-section .card-text {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 20px;
+    }
+
+    .skills-section .btn-outline-primary {
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-weight: 500;
+      border: 2px solid #3b82f6;
+      color: #3b82f6;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .skills-section .btn-outline-primary:hover {
+      background: #3b82f6;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #1e3a8a, #111827);
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .contact-section h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-section p i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+
+    .contact-section a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact-section a:hover {
+      color: #3b82f6;
+      transform: scale(1.1);
     }
 
     .contact-section .social-icon {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
-  }
-</style>
+
+    .contact-section .social-icon:hover {
+      transform: rotate(360deg);
+      opacity: 0.9;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+
+      .about-section h2,
+      .projects-section h2,
+      .skills-section h2,
+      .contact-section h2 {
+        font-size: 2.5rem;
+      }
+
+      .about-section img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .contact-section .social-icon {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
 
 </head>
+
 <body>
 
-<section id='about' class="about-section">
-  <div class="container">
-    <h2>About</h2>
-    <img src="images/about/1.jpg" alt="About Me">
-    <p>I am a passionate Computer Engineering undergraduate with a strong interest in AI, Machine Learning, and Generative AI, as well as hands-on expertise in MERN full stack development. I thrive at the intersection of AI innovation and robust software engineering, where I can apply my skills to build efficient, scalable applications and explore cutting-edge solutions.</p>
-  </div>
-</section>
+  <section id='about' class="about-section">
+    <div class="container">
+      <h2>About</h2>
+      <img src="images/about/1.jpg" alt="About Me">
+      <p>I am a passionate Computer Engineering undergraduate with a strong interest in AI, Machine Learning, and
+        Generative AI, as well as hands-on expertise in MERN full stack development. I thrive at the intersection of AI
+        innovation and robust software engineering, where I can apply my skills to build efficient, scalable
+        applications and explore cutting-edge solutions.</p>
+    </div>
+  </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-light">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Project 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/1.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Agentic AI Trip Navigator</h5>
-            <p class="card-text">Agentic AI Trip Navigator is an intelligent travel planning system built using CrewAI and LangChain frameworks. Designed as an agentic AI application, it coordinates the efforts of three specialized agents — guide_expert, location_expert, and planner_expert — to collaboratively generate personalized travel itineraries.</p>
-            <a href="https://www.linkedin.com/in/nidhushan-rajendran-a22a16244/details/projects/" class="btn btn-primary">Blog Post</a>
-            <a href="https://github.com/Nidhushan01/AgentiC_AI_Trip_Planner" class="btn btn-secondary">Source Code</a>
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/1.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Agentic AI Trip Navigator</h5>
+              <p class="card-text">Agentic AI Trip Navigator is an intelligent travel planning system built using CrewAI
+                and LangChain frameworks. Designed as an agentic AI application, it coordinates the efforts of three
+                specialized agents — guide_expert, location_expert, and planner_expert — to collaboratively generate
+                personalized travel itineraries.</p>
+              <a href="https://github.com/Nidhushan01/AgentiC_AI_Trip_Planner" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/2.png" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">
-              Diabetic-Retinopathy-Diagnosis-using-deeplearning</h5>
-            <p class="card-text">Developed deep learning models to classify the levels of diabetic retinopathy using VGG16, Inception-V3, and a custom CNN 
-             with the TensorFlow . Integrated Explainable AI  using LIME and Grad-CAM. Built an interactive Streamlit 
-              UI and deployed the application on Hugging Face.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/2.png" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">
+                Diabetic-Retinopathy-Diagnosis-using-deeplearning</h5>
+              <p class="card-text">Developed deep learning models to classify the levels of diabetic retinopathy using
+                VGG16, Inception-V3, and a custom CNN
+                with the TensorFlow . Integrated Explainable AI using LIME and Grad-CAM. Built an interactive Streamlit
+                UI and deployed the application on Hugging Face.</p>
+              <a href="https://github.com/Nidhushan01/Diabetic-Retinopathy-Diagnosis-using-deeplearning"
+                class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/3.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Xhalefit MERN Full stack application</h5>
-            <p class="card-text">Xhale_fit is a full-featured personalized fitness coaching web application developed using the MERN stack (MongoDB, Express.js, React, Node.js) 
-              The platform empowers users to achieve their fitness goals with custom workout plans, real-time progress tracking, and expert guidance.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/3.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Xhalefit MERN Full stack application</h5>
+              <p class="card-text">Xhale_fit is a full-featured personalized fitness coaching web application developed
+                using the MERN stack (MongoDB, Express.js, React, Node.js)
+                The platform empowers users to achieve their fitness goals with custom workout plans, real-time progress
+                tracking, and expert guidance.</p>
+              <a href="https://github.com/Nidhushan01/Xhalefit_MERN_stack" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 4i -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/4i.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">AI Doctor_RAG-Based Medical Assistant</h5>
-            <p class="card-text">AI Doctor is an advanced medical chatbot powered by a Retrieval-Augmented Generation (RAG) system. Leveraging LangChain, OpenAI API, and embeddings, it retrieves relevant medical information and provides accurate, context-aware responses. With a user-friendly Streamlit interface, AI Doctor offers instant, intelligent support for health-related queries.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 4i -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/4i.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">AI Doctor_RAG-Based Medical Assistant</h5>
+              <p class="card-text">AI Doctor is an advanced medical chatbot powered by a Retrieval-Augmented Generation
+                (RAG) system. Leveraging LangChain, OpenAI API, and embeddings, it retrieves relevant medical
+                information and provides accurate, context-aware responses. With a user-friendly Streamlit interface, AI
+                Doctor offers instant, intelligent support for health-related queries.</p>
+              <a href="https://github.com/Nidhushan01/Medical_AI_RAG_System" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 4(II) -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/4.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">GEN_AI_Database_QA_Tool</h5>
-            <p class="card-text">AI-powered question-answering tool designed to interact with relational databases using natural language queries. Built with LangChain, the tool leverages  machine learning techniques and prompt engineering to translate user questions into syntactically correct SQL queries, execute them, and return accurate answers.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 4(II) -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/4.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">GEN_AI_Database_QA_Tool</h5>
+              <p class="card-text">AI-powered question-answering tool designed to interact with relational databases
+                using natural language queries. Built with LangChain, the tool leverages machine learning techniques and
+                prompt engineering to translate user questions into syntactically correct SQL queries, execute them, and
+                return accurate answers.</p>
+              <a href="https://github.com/Nidhushan01/GEN_AI_Database_Q-A_Tool" class="btn btn-primary">Source
+                Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/5.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">BERT-Driven-Twitter(X)-Sentiment-Classifier</h5>
-            <p class="card-text">Twitter (X) sentiment analysis tool using a fine-tuned BERT model. Built with Python, it leverages Hugging Face Transformers for prediction and Streamlit for an interactive UI. Users can input text to get real-time "Positive" or "Negative" sentiment predictions with confidence scores.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/5.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">BERT-Driven-Twitter(X)-Sentiment-Classifier</h5>
+              <p class="card-text">Twitter (X) sentiment analysis tool using a fine-tuned BERT model. Built with Python,
+                it leverages Hugging Face Transformers for prediction and Streamlit for an interactive UI. Users can
+                input text to get real-time "Positive" or "Negative" sentiment predictions with confidence scores.</p>
+              <a href="https://github.com/Nidhushan01/BERT-Driven-Twitter-Sentiment-Classifier"
+                class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/6.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">
-              Gen AI-Powered Log Classification with Regex, Clustering, and Regression</h5>
-            <p class="card-text">Hybrid Log Classification System designed to intelligently analyze and classify system logs. The system integrates LLM, Regex-based preprocessing, Sentence Transformers, DBSCAN clustering, and Logistic Regression into a unified pipeline.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/6.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">
+                Gen AI-Powered Log Classification with Regex, Clustering, and Regression</h5>
+              <p class="card-text">Hybrid Log Classification System designed to intelligently analyze and classify
+                system logs. The system integrates LLM, Regex-based preprocessing, Sentence Transformers, DBSCAN
+                clustering, and Logistic Regression into a unified pipeline.</p>
+              <a href="https://github.com/Nidhushan01/Log_classification_system" class="btn btn-primary">Source
+                Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 7 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/7.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">
-              Agentic AI-Based E-commerce Price Tracker and Smart Buyer</h5>
-            <p class="card-text">An Agentic AI system that acts as a smart e-commerce assistant, interpreting user-defined purchase rules through natural language and autonomously evaluating conditions to simulate buying actions. It uses OpenAI's LLM for rule extraction, Selenium for live data scraping, and Streamlit for the UI.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 7 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/7.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">
+                Agentic AI-Based E-commerce Price Tracker and Smart Buyer</h5>
+              <p class="card-text">An Agentic AI system that acts as a smart e-commerce assistant, interpreting
+                user-defined purchase rules through natural language and autonomously evaluating conditions to simulate
+                buying actions. It uses OpenAI's LLM for rule extraction, Selenium for live data scraping, and Streamlit
+                for the UI.</p>
+              <a href="https://github.com/Nidhushan01/Agentic_Ai_Ecommerce" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 8 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/8.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">React_Based_Movie Searcher_App</h5>
-            <p class="card-text">A frontend web app built with React that lets users search for movies and save favorites. It integrates a public movie API, uses Context API for state management, and features a responsive UI with a favorites page for a personalized experience.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 8 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/8.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">React_Based_Movie Searcher_App</h5>
+              <p class="card-text">A frontend web app built with React that lets users search for movies and save
+                favorites. It integrates a public movie API, uses Context API for state management, and features a
+                responsive UI with a favorites page for a personalized experience.</p>
+              <a href="https://github.com/Nidhushan01/React_movie_searcher" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 9 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/9.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">NEWS_Articles_Q&A_Tool_With_Langchain</h5>
-            <p class="card-text">This project is a Generative AI (GenAI) tool designed for automated question answering on news articles. It uses NLP techniques with LangChain and OpenAI API to extract and generate contextually accurate answers. The UI is built using Streamlit, enabling users to input articles and ask questions.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 9 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/9.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">NEWS_Articles_Q&A_Tool_With_Langchain</h5>
+              <p class="card-text">This project is a Generative AI (GenAI) tool designed for automated question
+                answering on news articles. It uses NLP techniques with LangChain and OpenAI API to extract and generate
+                contextually accurate answers. The UI is built using Streamlit, enabling users to input articles and ask
+                questions.</p>
+              <a href="https://github.com/Nidhushan01/GEN_AI_Database_Q-A_Tool" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 10 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/10.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">house price prediction using machine learning</h5>
-            <p class="card-text">I developed a machine learning model to predict house prices based on various features such as location, size, and amenities. The end-to-end solution includes data preprocessing, model training, and deployment as a web application using Flask.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 10 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/10.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">house price prediction using machine learning</h5>
+              <p class="card-text">I developed a machine learning model to predict house prices based on various
+                features such as location, size, and amenities. The end-to-end solution includes data preprocessing,
+              <a href="https://github.com/Nidhushan01/house_price_prediction_using_machine_learning" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 11 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/11.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Potato_Plant_Health_Classifier_Using_deeplearning</h5>
-            <p class="card-text">This project is a deep learning-based tool for classifying the health of potato plants. Utilizing Convolutional Neural Networks (CNNs) and built with TensorFlow, the classifier can accurately identify whether a potato plant is healthy or affected by common diseases.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 11 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/11.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Potato_Plant_Health_Classifier_Using_deeplearning</h5>
+              <p class="card-text">This project is a deep learning-based tool for classifying the health of potato
+                plants. Utilizing Convolutional Neural Networks (CNNs) and built with TensorFlow, the classifier can
+                accurately identify whether a potato plant is healthy or affected by common diseases.</p>
+              <a href="https://github.com/Nidhushan01/Potato-Plant-Health-Classifier" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Project 12 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/12.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Laptops Online Store-Website Built Using HTML, CSS, and JavaScript
-            </h5>
-            <p class="card-text">I developed a fully responsive laptop e-commerce website using HTML, CSS, and JavaScript. The platform allows users to browse laptops, view product details, add items to their cart and filter products based on various criteria such as price, brand, and specifications. The site provides a seamless and intuitive user experience.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+        <!-- Project 12 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/12.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Laptops Online Store-Website Built Using HTML, CSS, and JavaScript
+              </h5>
+              <p class="card-text">I developed a fully responsive laptop e-commerce website using HTML, CSS, and
+                JavaScript. The platform allows users to browse laptops, view product details, add items to their cart
+                and filter products based on various criteria such as price, brand, and specifications. The site
+                provides a seamless and intuitive user experience.</p>
+              <a href="https://github.com/Nidhushan01/online_laptop_store_website" class="btn btn-primary">Source Code</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Contact Me Section -->
-<section id="contact" class="contact-section text-center text-white bg-dark">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <div class="row">
-      <div class="col-lg-6">
-        <p><i class="fas fa-envelope"></i>nidhushan1313@gmail.com</p>
+  <!-- Contact Me Section -->
+  <section id="contact" class="contact-section text-center text-white bg-dark">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <p><i class="fas fa-envelope"></i>nidhushan1313@gmail.com</p>
+        </div>
+        <div class="col-lg-6">
+          <p><i class="fas fa-phone"></i> 0764987900</p>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <p><i class="fas fa-phone"></i> 0764987900</p>
+      <div class="row">
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="www.linkedin.com/in/nidhushan-rajendran-a22a16244" target="_blank">
+            <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="https://github.com/Nidhushan01" target="_blank">
+            <img src="icons/github.png" alt="GitHub" class="social-icon">
+            GitHub
+          </a>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Nidhushan Rajendran </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="www.linkedin.com/in/nidhushan-rajendran-a22a16244" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-          LinkedIn
-        </a>
-      </div>
+  </nav>
 
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://github.com/Nidhushan01" target="_blank">
-          <img src="icons/github.png" alt="GitHub" class="social-icon">
-          GitHub
-        </a>
-      </div>
-    
-  </div>
-</section>
-
-<!-- Sticky Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home">Nidhushan Rajendran </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
