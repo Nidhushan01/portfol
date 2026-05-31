@@ -28,31 +28,6 @@
             background: var(--primary-bg);
             color: var(--text-primary);
             overflow-x: hidden;
-            cursor: none;
-        }
-
-        /* Custom Cursor */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--accent-color);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transition: all 0.1s ease;
-            mix-blend-mode: difference;
-        }
-
-        .cursor-follower {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            transition: all 0.3s ease;
         }
 
         /* Animated Background */
@@ -465,10 +440,6 @@
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
     <!-- Animated Background -->
     <div class="bg-animation"></div>
     <div class="floating-shapes">
@@ -492,7 +463,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="glitch">Nidhushan</h1>
-            <p class="subtitle">AI Engineer & Full Stack Developer</p>
+            <p class="subtitle">AI/ML Engineer</p>
+            <a href="images/cv.pdf" class="cta-button" download>Download Resume</a>
         </div>
     </section>
 
@@ -504,9 +476,9 @@
                 <img src="images/about/1.jpg" alt="Nidhushan Rajendran">
             </div>
             <div class="about-text fade-in">
-                <p>I am a passionate Computer Engineering undergraduate with a strong interest in AI, Machine Learning, and Generative AI, as well as hands-on expertise in MERN full stack development.</p>
-                <br>
-                <p>I thrive at the intersection of AI innovation and robust software engineering, where I can apply my skills to build efficient, scalable applications and explore cutting-edge solutions that push the boundaries of what's possible.</p>
+                <p>AI/ML Engineer with hands-on industry experience in Agentic AI, Large Language Models (LLMs), backend engineering, and AI deployment. Experienced in developing AI-powered applications, multi-agent systems, workflow automation, and scalable backend services using Python, FastAPI, LangGraph, and modern AI frameworks.</p>
+                <p>Passionate about building intelligent systems that solve real-world problems through Machine Learning, Generative AI, and data-driven innovation.</p>
+                <p>Looking for AI/ML roles focused on LLMs, Agentic AI, and applied machine learning.</p>
             </div>
         </div>
     </section>
@@ -702,33 +674,6 @@
     </section>
 
     <script>
-        // Custom Cursor
-        const cursor = document.querySelector('.cursor');
-        const follower = document.querySelector('.cursor-follower');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            
-            setTimeout(() => {
-                follower.style.left = e.clientX + 'px';
-                follower.style.top = e.clientY + 'px';
-            }, 100);
-        });
-
-        // Cursor hover effects
-        document.querySelectorAll('a, button, .project-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(1.5)';
-                cursor.style.backgroundColor = 'rgba(0, 212, 255, 0.2)';
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursor.style.backgroundColor = 'transparent';
-            });
-        });
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
